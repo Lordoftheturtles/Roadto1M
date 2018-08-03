@@ -20,6 +20,7 @@ override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: Inde
     case 0: IAPService.shared.purchase(product: .nonConsumable)
     case 1: IAPService.shared.purchase(product: .autoRenewingSubsciption)
     default: print("Restore")
+        
     }
 }
 }
