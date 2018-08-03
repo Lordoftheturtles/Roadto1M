@@ -41,10 +41,10 @@ class EmailListViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    // VARIABLES
+    //MARK:- EMAIL LIST VARIABLES
     var titleTextField: UITextField!
     
-    // FUNCTIONS
+    //MARK:- TITLE FUNCTION
 
     
     func titleTextField(textfield: UITextField!)
@@ -54,7 +54,7 @@ class EmailListViewController: UIViewController, UITextFieldDelegate {
         
         
     }
-    // BUTTON ACTIONS
+    //MARK:- EMAIL BUTTON ACTIONS
     @IBAction func addEmailButton(_ sender: UIBarButtonItem)
     {
         let alert = UIAlertController(title: "Add Email to List", message: "Insert Email Address Below", preferredStyle: .alert)
@@ -90,12 +90,6 @@ class EmailListViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        // Use return to ensure the execution is stopped and the function wont exceed the function :) - Buggy
-        // Add all emails listed into a data stored
-        // Action button {
-        //  (get Email list)
-        // { paste data into Email
-        
         
         PersistenceServce.saveContext()
         emailName.append(user)
@@ -124,7 +118,6 @@ class EmailListViewController: UIViewController, UITextFieldDelegate {
     }
 }
 
-// MARK:- Table View Stuff
 extension EmailListViewController:UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -157,9 +150,9 @@ extension EmailListViewController:UITableViewDelegate, UITableViewDataSource{
         tableView.reloadData()
     }
     
-     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == .delete) {
-let emailToRemove = emailName[indexPath.row]
+            let emailToRemove = emailName[indexPath.row]
             emailName.remove(at: indexPath.row)
             context.delete(emailToRemove)
             do {
@@ -169,8 +162,11 @@ let emailToRemove = emailName[indexPath.row]
                 print("Errors deleting emails with \(error)")
             }
             tableView.deleteRows(at: [indexPath], with: .automatic)
+            
+        }
+    }
+}
 
-}
-}
-    
-}
+
+
+

@@ -36,13 +36,13 @@ class chatViewController: UIViewController {
         }
         
     }
-    //OUTLETS
+    //MARK:- CHAT OUTLETS
    
     @IBOutlet weak var joinChatRoom: UIButton!
     
     
     
-    //FUNCTIONS
+    //MARK:- CHAT FUNCTIONS
     func animateUponLoad() {
         
         UIView.animate(withDuration: 0.5, delay: 0.2 , options: .curveEaseOut, animations: {self.joinChatRoom.frame.origin.x += 292})
