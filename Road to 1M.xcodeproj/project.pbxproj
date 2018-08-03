@@ -22,6 +22,10 @@
 		55A480F9210DDA16002C6B40 /* ChatPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A480F8210DDA16002C6B40 /* ChatPageViewController.swift */; };
 		55A480FF210E0089002C6B40 /* EmailListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A480FE210E0089002C6B40 /* EmailListViewController.swift */; };
 		55A48102210EE3F8002C6B40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55A48100210EE3F8002C6B40 /* Main.storyboard */; };
+		55DE95AC2114D6CE005E97CA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE95AB2114D6CE005E97CA /* Extensions.swift */; };
+		55DE95AF2114E0B7005E97CA /* EmailList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55DE95AE2114E0B7005E97CA /* EmailList.storyboard */; };
+		55DE95B12114E0CB005E97CA /* Upgrade.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55DE95B02114E0CB005E97CA /* Upgrade.storyboard */; };
+		55DE95B32114E0D8005E97CA /* ChatView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55DE95B22114E0D8005E97CA /* ChatView.storyboard */; };
 		55E855E4210D758F00A03B4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E855E3210D758F00A03B4A /* AppDelegate.swift */; };
 		55E855E6210D758F00A03B4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E855E5210D758F00A03B4A /* ViewController.swift */; };
 		55E855EC210D758F00A03B4A /* Road_to_1M.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 55E855EA210D758F00A03B4A /* Road_to_1M.xcdatamodeld */; };
@@ -49,6 +53,10 @@
 		55A480F8210DDA16002C6B40 /* ChatPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPageViewController.swift; sourceTree = "<group>"; };
 		55A480FE210E0089002C6B40 /* EmailListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailListViewController.swift; sourceTree = "<group>"; };
 		55A48101210EE3F8002C6B40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		55DE95AB2114D6CE005E97CA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		55DE95AE2114E0B7005E97CA /* EmailList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmailList.storyboard; sourceTree = "<group>"; };
+		55DE95B02114E0CB005E97CA /* Upgrade.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Upgrade.storyboard; sourceTree = "<group>"; };
+		55DE95B22114E0D8005E97CA /* ChatView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatView.storyboard; sourceTree = "<group>"; };
 		55E855E0210D758F00A03B4A /* Road to 1M.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Road to 1M.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55E855E3210D758F00A03B4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55E855E5210D758F00A03B4A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,7 +91,7 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		55198DE521109238009C9CD7 /* ViewController */ = {
+		55198DE521109238009C9CD7 /* CONTROLLER */ = {
 			isa = PBXGroup;
 			children = (
 				552D8E932114A1C3008AEE93 /* IAPTableViewController.swift */,
@@ -93,7 +101,52 @@
 				55E855E5210D758F00A03B4A /* ViewController.swift */,
 				55A480F0210DABF4002C6B40 /* chatViewController.swift */,
 			);
-			path = ViewController;
+			path = CONTROLLER;
+			sourceTree = "<group>";
+		};
+		55DE95A62114CABD005E97CA /* MODEL */ = {
+			isa = PBXGroup;
+			children = (
+				55198DDF21104CB6009C9CD7 /* User+CoreDataClass.swift */,
+				552D8E8B21147ACE008AEE93 /* IAPProduct.swift */,
+				552D8E8D21147FB1008AEE93 /* IAPService.swift */,
+			);
+			path = MODEL;
+			sourceTree = "<group>";
+		};
+		55DE95A72114CAFE005E97CA /* VIEW */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VIEW;
+			sourceTree = "<group>";
+		};
+		55DE95A92114CDDF005E97CA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				55198DE021104CB6009C9CD7 /* User+CoreDataProperties.swift */,
+				55DE95AB2114D6CE005E97CA /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		55DE95AA2114CE02005E97CA /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				55A480F6210DD376002C6B40 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		55DE95AD2114E067005E97CA /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				55A48100210EE3F8002C6B40 /* Main.storyboard */,
+				55DE95AE2114E0B7005E97CA /* EmailList.storyboard */,
+				55DE95B02114E0CB005E97CA /* Upgrade.storyboard */,
+				55DE95B22114E0D8005E97CA /* ChatView.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		55E855D7210D758F00A03B4A = {
@@ -117,15 +170,14 @@
 		55E855E2210D758F00A03B4A /* Road to 1M */ = {
 			isa = PBXGroup;
 			children = (
-				55198DE521109238009C9CD7 /* ViewController */,
-				55198DDF21104CB6009C9CD7 /* User+CoreDataClass.swift */,
-				55198DE021104CB6009C9CD7 /* User+CoreDataProperties.swift */,
-				55A480EB210D8F3B002C6B40 /* Road to 1M.entitlements */,
-				552D8E8B21147ACE008AEE93 /* IAPProduct.swift */,
-				552D8E8D21147FB1008AEE93 /* IAPService.swift */,
+				55DE95AA2114CE02005E97CA /* Constants */,
+				55DE95A92114CDDF005E97CA /* Extensions */,
+				55198DE521109238009C9CD7 /* CONTROLLER */,
+				55DE95A62114CABD005E97CA /* MODEL */,
+				55DE95A72114CAFE005E97CA /* VIEW */,
+				55DE95AD2114E067005E97CA /* Storyboards */,
 				55E855E3210D758F00A03B4A /* AppDelegate.swift */,
-				55A480F6210DD376002C6B40 /* Constants.swift */,
-				55A48100210EE3F8002C6B40 /* Main.storyboard */,
+				55A480EB210D8F3B002C6B40 /* Road to 1M.entitlements */,
 				55198DDD21104549009C9CD7 /* PersistenceService.swift */,
 				55A480F5210DD2A8002C6B40 /* Bridging-Header.h */,
 				55E855ED210D759B00A03B4A /* Assets.xcassets */,
@@ -215,7 +267,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55DE95B32114E0D8005E97CA /* ChatView.storyboard in Resources */,
 				55E855F1210D759B00A03B4A /* LaunchScreen.storyboard in Resources */,
+				55DE95B12114E0CB005E97CA /* Upgrade.storyboard in Resources */,
+				55DE95AF2114E0B7005E97CA /* EmailList.storyboard in Resources */,
 				55E855EE210D759B00A03B4A /* Assets.xcassets in Resources */,
 				55A480ED210D8FEB002C6B40 /* GoogleService-Info.plist in Resources */,
 				55A48102210EE3F8002C6B40 /* Main.storyboard in Resources */,
@@ -288,6 +343,7 @@
 			files = (
 				55A480F7210DD376002C6B40 /* Constants.swift in Sources */,
 				55198DDE21104549009C9CD7 /* PersistenceService.swift in Sources */,
+				55DE95AC2114D6CE005E97CA /* Extensions.swift in Sources */,
 				553BB2EF2113687B0013E00D /* UpgradeNowVC.swift in Sources */,
 				552D8E942114A1C3008AEE93 /* IAPTableViewController.swift in Sources */,
 				55A480F9210DDA16002C6B40 /* ChatPageViewController.swift in Sources */,

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tyZ-IP-mcN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main-->
+        <scene sceneID="Dct-jc-re4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="Ulh-an-Q8J" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qr8-ly-mBa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="266" y="210"/>
+        </scene>
+        <!--Benefits-->
+        <scene sceneID="9Ge-Yf-eA9">
+            <objects>
+                <viewController storyboardIdentifier="benefitsViewController" id="0Ec-Y5-npg" customClass="UpgradeNowVC" customModule="Road_to_1M" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FFI-PS-4o5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="UpgradeNowBackDrop" translatesAutoresizingMaskIntoConstraints="NO" id="4JX-86-T04">
+                                <rect key="frame" x="-2" y="0.0" width="377" height="667"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUk-bY-MfQ">
+                                <rect key="frame" x="41" y="70" width="304" height="55"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <state key="normal" image="UpgradeNowButton"/>
+                                <connections>
+                                    <segue destination="G0O-xF-rs1" kind="show" identifier="IAPSegue" id="o81-6k-qlI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="L16-KU-FEL"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Benefits" id="WKy-q2-Oug">
+                        <barButtonItem key="leftBarButtonItem" title="Home" id="5BH-bP-fUp">
+                            <connections>
+                                <action selector="homeButtonTapped:" destination="0Ec-Y5-npg" id="4Dj-Oz-e7c"/>
+                                <segue destination="Ulh-an-Q8J" kind="show" identifier="benefitsToHome" id="G88-hs-5OD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TTn-uo-cuv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="732" y="-255.02248875562222"/>
+        </scene>
+        <!--Upgrade Membership-->
+        <scene sceneID="X2X-0I-IRQ">
+            <objects>
+                <viewController id="G0O-xF-rs1" customClass="IAPTableViewController" customModule="Road_to_1M" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bBH-pW-6HZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rAQ-dM-fsH">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellPre" rowHeight="82" id="vqA-Ph-eUs">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="82"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vqA-Ph-eUs" id="XCx-vJ-pmZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="81.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wVy-sQ-bDW" firstAttribute="bottom" secondItem="rAQ-dM-fsH" secondAttribute="bottom" id="HxS-AX-YNF"/>
+                            <constraint firstItem="rAQ-dM-fsH" firstAttribute="leading" secondItem="wVy-sQ-bDW" secondAttribute="leading" id="P1a-l4-PUJ"/>
+                            <constraint firstItem="rAQ-dM-fsH" firstAttribute="top" secondItem="wVy-sQ-bDW" secondAttribute="top" id="Pet-5K-Fzy"/>
+                            <constraint firstItem="wVy-sQ-bDW" firstAttribute="trailing" secondItem="rAQ-dM-fsH" secondAttribute="trailing" id="ucW-BX-rvk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wVy-sQ-bDW"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Upgrade Membership" id="P0c-ng-vYy"/>
+                    <connections>
+                        <outlet property="tableView" destination="rAQ-dM-fsH" id="Jas-kq-aNK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RL4-2K-xfx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1538" y="-255"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GBy-qD-3pg">
+            <objects>
+                <navigationController storyboardIdentifier="BenefitsNav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tyZ-IP-mcN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="K1x-7e-Cln">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0Ec-Y5-npg" kind="relationship" relationship="rootViewController" id="C7p-Mb-8b6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ftq-4H-UFK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-207.19999999999999" y="-255.02248875562222"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="UpgradeNowBackDrop" width="375" height="667"/>
+        <image name="UpgradeNowButton" width="304" height="55"/>
+    </resources>
+</document>

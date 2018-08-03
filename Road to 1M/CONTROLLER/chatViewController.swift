@@ -49,20 +49,11 @@ class chatViewController: UIViewController {
        
         
     }
-   
-    @IBAction func joinChatRoomButtonTapped(_ sender: UIButton) {
-        if (FBSDKAccessToken.current()) != nil  {
-            //User is logged in, do work such as go to next view controller
-            print("Has Access token")
-            performSegue(withIdentifier: "chatPageSegue", sender: self)
-        } else {
-            //User is logged out
-            let alert = UIAlertController(title: "Sorry", message: "You need to be logged in to use this function", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
-            print("Needs to be logged in")
-            self.present(alert, animated: true)
+    @IBAction func chatToHome(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "homeViewController") as? UINavigationController
+        performSegue(withIdentifier: "chatToHome", sender: nil)
     }
     
+}
 
-}
-}

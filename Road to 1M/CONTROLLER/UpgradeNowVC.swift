@@ -22,6 +22,7 @@ class UpgradeNowVC: UIViewController {
     let token = FBSDKAccessToken.current()
     let currentToken = FBSDKAccessToken.currentAccessTokenIsActive()
     
+    //MARK:- Upgrade Now Outlet
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,21 +30,17 @@ class UpgradeNowVC: UIViewController {
 
     }
     // Action of when upgrade button has been tapped!
-    @IBAction func upgradeNowButtonTapped(_ sender: UIButton) {
-//        if (FBSDKAccessToken.current()) == nil {
-//            let alert = UIAlertController(title: "You need to be logged in!", message: "You need to be logged in to Facebook to Upgrade!", preferredStyle: .alert)
-//            alert.addAction(UIAlertAction(title: "Okay!", style: .cancel, handler: nil))
-//            self.present(alert, animated: true,completion: nil)
-//            //Isnt Logged in,
-//            print("Not Logged in, cannot complete Purchase")
-//        } else {
-//            if (FBSDKAccessToken.current()) != nil {
-//                print("Can Buy!")
-//                // Is Logged in!
-        performSegue(withIdentifier: "IAPSegue", sender: self)
-        
-            }
-        }
-    //}
+  
     
-//}
+    @IBAction func homeButtonTapped(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "homeViewController") as? UINavigationController
+        performSegue(withIdentifier: "benefitsToHome", sender: nil)
+    }
+
+    
+}
+
+
+    
+

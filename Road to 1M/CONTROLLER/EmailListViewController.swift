@@ -39,6 +39,13 @@ class EmailListViewController: UIViewController, UITextFieldDelegate {
         
       
     }
+    //MARK:- NAVIGATION
+    @IBAction func homeButtonTapped(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "homeViewController") as? UINavigationController
+        performSegue(withIdentifier: "emailToHome", sender: nil)
+        
+    }
     
     
     //MARK:- EMAIL LIST VARIABLES

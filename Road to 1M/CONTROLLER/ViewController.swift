@@ -62,7 +62,11 @@ class ViewController: UIViewController {
     
     
     @IBAction func upgradeButtonTabbed(_ sender: Any) {
-        performSegue(withIdentifier: "IAPSegue", sender: nil)
+       
+        //MARK:- SEGUE
+        let storyboard = UIStoryboard(name: "Upgrade", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "benefitsViewController") as? UINavigationController
+        performSegue(withIdentifier: "benefitsSegue", sender: nil)
     }
     
     
@@ -87,7 +91,11 @@ func isUserLoggedIn() {
     if (FBSDKAccessToken.current()) != nil  {
         //User is logged in!
         print("Has Access token")
-        performSegue(withIdentifier: "chatViewSegue", sender: self)
+        //MARK:- SEGUE
+        //Perform segue to Chat controller
+        let storyboard = UIStoryboard(name: "ChatView", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "chatViewController") as? UINavigationController
+        performSegue(withIdentifier: "chatViewSegue", sender: nil)
     } else {
         //User is logged out
         let alert = UIAlertController(title: "Sorry", message: "You need to be logged in to use this function", preferredStyle: .alert)
@@ -104,14 +112,10 @@ func isUserLoggedIn() {
 }
 
 @IBAction func emailListButtonTapped(_ sender: UIButton) {
-    
-    let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-    
-    let viewController = storyboard.instantiateViewController(withIdentifier: "emailViewController")
-    
-    let top = UIApplication.shared.keyWindow?.rootViewController
-    
-    top?.present(viewController, animated: true, completion: nil)
+    let storyboard = UIStoryboard(name: "EmailList", bundle: nil)
+    let vc = storyboard.instantiateViewController(withIdentifier: "emailViewController") as? UINavigationController
+    performSegue(withIdentifier: "emailListSegue", sender: nil)
+    //MARK:- SEGUE
     
 }
 //NAVIGATION

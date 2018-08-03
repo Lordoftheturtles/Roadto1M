@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="p0Q-H6-IBx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Chat Home-->
+        <scene sceneID="5ZC-Jz-jPp">
+            <objects>
+                <viewController storyboardIdentifier="chatViewController" id="lyk-N6-7Pt" customClass="chatViewController" customModule="Road_to_1M" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yee-JL-Ao6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Homescreen" translatesAutoresizingMaskIntoConstraints="NO" id="bvu-gj-0Ql">
+                                <rect key="frame" x="-9" y="-7" width="393" height="680"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TextFieldHomescreen" translatesAutoresizingMaskIntoConstraints="NO" id="e8f-Nh-4tI">
+                                <rect key="frame" x="45" y="152" width="290" height="365"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXp-wh-BT0">
+                                <rect key="frame" x="-200" y="224" width="200" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="joinChatRoom"/>
+                                <connections>
+                                    <segue destination="gfd-Z9-Avz" kind="show" identifier="chatPageSegue" id="cw3-Xe-GAp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hd7-fb-9Kv">
+                                <rect key="frame" x="139" y="461" width="100" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="returnButton"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="LLt-Uj-eP0"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Chat Home" id="gev-CE-wCS">
+                        <barButtonItem key="leftBarButtonItem" title="Home" id="Rea-Ku-D9e">
+                            <connections>
+                                <action selector="chatToHome:" destination="lyk-N6-7Pt" id="gTA-pM-5vB"/>
+                                <segue destination="PKY-x7-VrH" kind="show" identifier="chatToHome" id="PaJ-Cm-s5s"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="joinChatRoom" destination="bXp-wh-BT0" id="37v-Qx-MJL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="seK-Gz-tpc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2976.8000000000002" y="318.89055472263868"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="sth-zE-atJ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="PKY-x7-VrH" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2gi-1A-hcg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2671" y="731"/>
+        </scene>
+        <!--Chat Page-->
+        <scene sceneID="vZY-E2-TKS">
+            <objects>
+                <viewController id="gfd-Z9-Avz" customClass="ChatPageViewController" customModule="Road_to_1M" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pwr-Cm-qdy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="dNX-EZ-AgW"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Chat Page" id="fSO-iY-QuM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DUx-DF-II1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3942" y="319"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IQc-rv-uZ7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="p0Q-H6-IBx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JKB-z7-0lD">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lyk-N6-7Pt" kind="relationship" relationship="rootViewController" id="TBm-ey-v4c"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jic-BZ-9c0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2037.5999999999999" y="318.89055472263868"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Homescreen" width="375" height="667"/>
+        <image name="TextFieldHomescreen" width="294" height="369"/>
+        <image name="joinChatRoom" width="200" height="60"/>
+        <image name="returnButton" width="100" height="31"/>
+    </resources>
+</document>
