@@ -58,6 +58,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var twitterShareButton: UIButton! //-236 3.2
     @IBOutlet weak var instagramShareButton: UIButton! // -236 3.4
     
+    // IBActions
+    
+    
+    @IBAction func upgradeButtonTabbed(_ sender: Any) {
+        performSegue(withIdentifier: "IAPSegue", sender: nil)
+    }
+    
     
     
     
@@ -154,7 +161,6 @@ class ViewController: UIViewController {
             print("Already Logged in")
         
         }
-}
+    }
 }
     
-
