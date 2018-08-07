@@ -12,9 +12,6 @@
 		55198DE221104CB6009C9CD7 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55198DE021104CB6009C9CD7 /* User+CoreDataProperties.swift */; };
 		55198DE421106B75009C9CD7 /* SwiftValidator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55198DE321106B75009C9CD7 /* SwiftValidator.framework */; };
 		552D8E84211473E8008AEE93 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 552D8E83211473E8008AEE93 /* StoreKit.framework */; };
-		552D8E8C21147ACE008AEE93 /* IAPProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552D8E8B21147ACE008AEE93 /* IAPProduct.swift */; };
-		552D8E8E21147FB1008AEE93 /* IAPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552D8E8D21147FB1008AEE93 /* IAPService.swift */; };
-		552D8E942114A1C3008AEE93 /* IAPTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552D8E932114A1C3008AEE93 /* IAPTableViewController.swift */; };
 		553BB2EF2113687B0013E00D /* UpgradeNowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB2EE2113687B0013E00D /* UpgradeNowVC.swift */; };
 		55A480ED210D8FEB002C6B40 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55A480EC210D8FEB002C6B40 /* GoogleService-Info.plist */; };
 		55A480F1210DABF4002C6B40 /* chatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A480F0210DABF4002C6B40 /* chatViewController.swift */; };
@@ -41,9 +38,6 @@
 		55198DE021104CB6009C9CD7 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		55198DE321106B75009C9CD7 /* SwiftValidator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftValidator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		552D8E83211473E8008AEE93 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		552D8E8B21147ACE008AEE93 /* IAPProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPProduct.swift; sourceTree = "<group>"; };
-		552D8E8D21147FB1008AEE93 /* IAPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPService.swift; sourceTree = "<group>"; };
-		552D8E932114A1C3008AEE93 /* IAPTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPTableViewController.swift; sourceTree = "<group>"; };
 		553BB2EE2113687B0013E00D /* UpgradeNowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeNowVC.swift; sourceTree = "<group>"; };
 		55A480EB210D8F3B002C6B40 /* Road to 1M.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Road to 1M.entitlements"; sourceTree = "<group>"; };
 		55A480EC210D8FEB002C6B40 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -94,7 +88,6 @@
 		55198DE521109238009C9CD7 /* CONTROLLER */ = {
 			isa = PBXGroup;
 			children = (
-				552D8E932114A1C3008AEE93 /* IAPTableViewController.swift */,
 				55A480FE210E0089002C6B40 /* EmailListViewController.swift */,
 				553BB2EE2113687B0013E00D /* UpgradeNowVC.swift */,
 				55A480F8210DDA16002C6B40 /* ChatPageViewController.swift */,
@@ -108,8 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				55198DDF21104CB6009C9CD7 /* User+CoreDataClass.swift */,
-				552D8E8B21147ACE008AEE93 /* IAPProduct.swift */,
-				552D8E8D21147FB1008AEE93 /* IAPService.swift */,
 			);
 			path = MODEL;
 			sourceTree = "<group>";
@@ -313,6 +304,7 @@
 				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftValidator/SwiftValidator.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -326,6 +318,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftValidator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -345,14 +338,11 @@
 				55198DDE21104549009C9CD7 /* PersistenceService.swift in Sources */,
 				55DE95AC2114D6CE005E97CA /* Extensions.swift in Sources */,
 				553BB2EF2113687B0013E00D /* UpgradeNowVC.swift in Sources */,
-				552D8E942114A1C3008AEE93 /* IAPTableViewController.swift in Sources */,
 				55A480F9210DDA16002C6B40 /* ChatPageViewController.swift in Sources */,
 				55E855E6210D758F00A03B4A /* ViewController.swift in Sources */,
 				55E855E4210D758F00A03B4A /* AppDelegate.swift in Sources */,
-				552D8E8C21147ACE008AEE93 /* IAPProduct.swift in Sources */,
 				55198DE121104CB6009C9CD7 /* User+CoreDataClass.swift in Sources */,
 				55A480F1210DABF4002C6B40 /* chatViewController.swift in Sources */,
-				552D8E8E21147FB1008AEE93 /* IAPService.swift in Sources */,
 				55A480FF210E0089002C6B40 /* EmailListViewController.swift in Sources */,
 				55198DE221104CB6009C9CD7 /* User+CoreDataProperties.swift in Sources */,
 				55E855EC210D758F00A03B4A /* Road_to_1M.xcdatamodeld in Sources */,

@@ -8,6 +8,8 @@
 
 import UIKit
 import JSQMessagesViewController
+import FBSDKLoginKit
+
 //THINGS TO DO://////////////////////////////////////////
 // Add Facebook Login (Comes up with Facebook Name)
 // Deletes Message sent 24 hours after being sent
@@ -81,6 +83,7 @@ class ChatPageViewController: JSQMessagesViewController {
         })
     
     }
+    
     @objc func showDisplayNameDialog()
     {
         

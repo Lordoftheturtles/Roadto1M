@@ -44,6 +44,7 @@ PODS:
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
   - SwiftValidator (4.0.0)
+  - SwiftyJSON (4.1.0)
 
 DEPENDENCIES:
   - FBSDKCoreKit
@@ -53,6 +54,7 @@ DEPENDENCIES:
   - Firebase/Database
   - JSQMessagesViewController
   - SwiftValidator (from `https://github.com/jpotts18/SwiftValidator.git`, branch `master`)
+  - SwiftyJSON
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -70,6 +72,7 @@ SPEC REPOS:
     - JSQSystemSoundPlayer
     - leveldb-library
     - nanopb
+    - SwiftyJSON
 
 EXTERNAL SOURCES:
   SwiftValidator:
@@ -97,7 +100,8 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   SwiftValidator: 25ded5ca1f10c05adf57f6ac82a72d28ac8d91af
+  SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: 686e42a55d321c8b1ac245a39761e09b38bd7acb
+PODFILE CHECKSUM: a3b92381d9f8976aabff9af23c76279a09b92128
 
 COCOAPODS: 1.5.3

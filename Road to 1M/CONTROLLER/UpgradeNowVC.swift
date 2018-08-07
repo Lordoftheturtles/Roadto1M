@@ -22,6 +22,14 @@ class UpgradeNowVC: UIViewController {
     let token = FBSDKAccessToken.current()
     let currentToken = FBSDKAccessToken.currentAccessTokenIsActive()
     
+    @IBOutlet weak var oneTimePay: UIButton!
+    @IBOutlet weak var becomeAMember: UIButton!
+    @IBOutlet weak var upgradeNow: UIButton!
+    @IBOutlet weak var becomeAMemberLogo: UIImageView!
+    @IBOutlet weak var oneTimePaymentLogo: UIImageView!
+    @IBOutlet weak var slideUpBar: UIImageView!
+    
+    
     //MARK:- Upgrade Now Outlet
     
     override func viewDidLoad() {
@@ -38,7 +46,37 @@ class UpgradeNowVC: UIViewController {
         performSegue(withIdentifier: "benefitsToHome", sender: nil)
     }
 
+    @IBAction func oneTimePayButtonTapped(_ sender: UIButton) {
+        print("One Time Pay Button Tapped")
+    }
     
+    @IBAction func becomeAMemberButtonTapped(_ sender: UIButton) {
+        print("Become a Member Button Tapped!")
+    }
+    @IBAction func upgradeNowButtonTapped(_ sender: UIButton) {
+        print("Upgrade Now Button Tapped")
+        loadUpgradeBar()
+    
+    }
+    
+    // Loads the Upgrade Bar
+    func loadUpgradeBar() {
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseOut, animations: {self.slideUpBar.frame.origin.y -= 200})
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseOut, animations: {self.oneTimePaymentLogo.frame.origin.y -= 200})
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseOut, animations: {self.becomeAMemberLogo.frame.origin.y -= 200})
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseOut, animations: {self.oneTimePay.frame.origin.y -= 200})
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseOut, animations: {self.becomeAMember.frame.origin.y -= 200})
+        print("Your upgrade bar is loading!!")
+    }
+    // Hides Upgrade Bar
+    func cancelUpgradeBar() {
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseOut, animations: {self.slideUpBar.frame.origin.y += 200})
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseOut, animations: {self.oneTimePaymentLogo.frame.origin.y += 200})
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseOut, animations: {self.becomeAMemberLogo.frame.origin.y += 200})
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseOut, animations: {self.oneTimePay.frame.origin.y += 200})
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseOut, animations: {self.becomeAMember.frame.origin.y += 200})
+        print("We are hiding your upgrade bar!")
+    }
 }
 
 
