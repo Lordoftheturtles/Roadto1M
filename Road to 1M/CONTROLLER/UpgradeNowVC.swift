@@ -28,6 +28,7 @@ class UpgradeNowVC: UIViewController {
     @IBOutlet weak var becomeAMemberLogo: UIImageView!
     @IBOutlet weak var oneTimePaymentLogo: UIImageView!
     @IBOutlet weak var slideUpBar: UIImageView!
+    @IBOutlet weak var cancelButton: UIButton!
     
     
     //MARK:- Upgrade Now Outlet
@@ -56,8 +57,12 @@ class UpgradeNowVC: UIViewController {
     @IBAction func upgradeNowButtonTapped(_ sender: UIButton) {
         print("Upgrade Now Button Tapped")
         loadUpgradeBar()
-    
     }
+    @IBAction func cancelButtonTapped(_ sender: UIButton) {
+        cancelUpgradeBar()
+    }
+    
+    
     
     // Loads the Upgrade Bar
     func loadUpgradeBar() {
@@ -66,15 +71,19 @@ class UpgradeNowVC: UIViewController {
         UIView.animate(withDuration: 1, delay: 0, options: .curveEaseOut, animations: {self.becomeAMemberLogo.frame.origin.y -= 200})
         UIView.animate(withDuration: 1, delay: 0, options: .curveEaseOut, animations: {self.oneTimePay.frame.origin.y -= 200})
         UIView.animate(withDuration: 1, delay: 0, options: .curveEaseOut, animations: {self.becomeAMember.frame.origin.y -= 200})
+        UIView.animate(withDuration: 2, delay: 1.5, options: .curveEaseOut, animations: {self.cancelButton.frame.origin.x += 80})
+        UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut, animations: {self.upgradeNow.frame.origin.x -= 400})
         print("Your upgrade bar is loading!!")
     }
     // Hides Upgrade Bar
     func cancelUpgradeBar() {
-        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseOut, animations: {self.slideUpBar.frame.origin.y += 200})
-        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseOut, animations: {self.oneTimePaymentLogo.frame.origin.y += 200})
-        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseOut, animations: {self.becomeAMemberLogo.frame.origin.y += 200})
-        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseOut, animations: {self.oneTimePay.frame.origin.y += 200})
-        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseOut, animations: {self.becomeAMember.frame.origin.y += 200})
+        UIView.animate(withDuration: 1, delay: 1, options: .curveEaseOut, animations: {self.slideUpBar.frame.origin.y += 200})
+        UIView.animate(withDuration: 1, delay: 1, options: .curveEaseOut, animations: {self.oneTimePaymentLogo.frame.origin.y += 200})
+        UIView.animate(withDuration: 1, delay: 1, options: .curveEaseOut, animations: {self.becomeAMemberLogo.frame.origin.y += 200})
+        UIView.animate(withDuration: 1, delay: 1, options: .curveEaseOut, animations: {self.oneTimePay.frame.origin.y += 200})
+        UIView.animate(withDuration: 1, delay: 1, options: .curveEaseOut, animations: {self.becomeAMember.frame.origin.y += 200})
+        UIView.animate(withDuration: 2, delay: 0, options: .curveEaseOut, animations: {self.cancelButton.frame.origin.x -= 80})
+        UIView.animate(withDuration: 1.5, delay: 0, options: .curveEaseOut, animations: {self.upgradeNow.frame.origin.x += 400})
         print("We are hiding your upgrade bar!")
     }
 }

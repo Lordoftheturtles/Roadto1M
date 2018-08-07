@@ -66,6 +66,14 @@
                                     <action selector="becomeAMemberButtonTapped:" destination="0Ec-Y5-npg" eventType="touchUpInside" id="Igz-8v-CrG"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SR1-BH-Gga">
+                                <rect key="frame" x="-80" y="63" width="71" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="cancelButton"/>
+                                <connections>
+                                    <action selector="cancelButtonTapped:" destination="0Ec-Y5-npg" eventType="touchUpInside" id="WoM-Rd-aKh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="L16-KU-FEL"/>
@@ -81,6 +89,7 @@
                     <connections>
                         <outlet property="becomeAMember" destination="xBD-e8-kly" id="vkB-jO-8gJ"/>
                         <outlet property="becomeAMemberLogo" destination="mmD-ri-Jvj" id="mPq-XM-jGj"/>
+                        <outlet property="cancelButton" destination="SR1-BH-Gga" id="Aqx-C3-zGd"/>
                         <outlet property="oneTimePay" destination="dUD-C0-YdG" id="Azt-qm-JUC"/>
                         <outlet property="oneTimePaymentLogo" destination="fTb-VR-Xoa" id="Vlo-Au-So6"/>
                         <outlet property="slideUpBar" destination="9XI-kF-D7F" id="7rJ-CU-AjY"/>
@@ -117,5 +126,6 @@
         <image name="UpgradeNowBackDrop" width="375" height="667"/>
         <image name="UpgradeNowButton" width="304" height="55"/>
         <image name="buy button" width="59" height="24"/>
+        <image name="cancelButton" width="71" height="23"/>
     </resources>
 </document>
