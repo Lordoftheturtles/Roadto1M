@@ -16,8 +16,8 @@ import Firebase
 //
 ////////////////////////////////////////////////////////////
 
-
-class UpgradeNowVC: UIViewController {
+// UIViewController
+class UpgradeNowVC: ViewController {
     
     let token = FBSDKAccessToken.current()
     let currentToken = FBSDKAccessToken.currentAccessTokenIsActive()
@@ -46,14 +46,17 @@ class UpgradeNowVC: UIViewController {
         let vc = storyboard.instantiateViewController(withIdentifier: "homeViewController") as? UINavigationController
         performSegue(withIdentifier: "benefitsToHome", sender: nil)
     }
-
+// StoreKit Action buttons
     @IBAction func oneTimePayButtonTapped(_ sender: UIButton) {
         print("One Time Pay Button Tapped")
+        purchase(purchase: Premium)
     }
     
     @IBAction func becomeAMemberButtonTapped(_ sender: UIButton) {
         print("Become a Member Button Tapped!")
+        purchase(purchase: PremiumAutoRenew)
     }
+    //Animation Buttons
     @IBAction func upgradeNowButtonTapped(_ sender: UIButton) {
         print("Upgrade Now Button Tapped")
         loadUpgradeBar()

@@ -45,6 +45,7 @@ PODS:
   - nanopb/encode (0.3.8)
   - SwiftValidator (4.0.0)
   - SwiftyJSON (4.1.0)
+  - SwiftyStoreKit (0.13.3)
 
 DEPENDENCIES:
   - FBSDKCoreKit
@@ -55,6 +56,7 @@ DEPENDENCIES:
   - JSQMessagesViewController
   - SwiftValidator (from `https://github.com/jpotts18/SwiftValidator.git`, branch `master`)
   - SwiftyJSON
+  - SwiftyStoreKit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -73,6 +75,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - SwiftyJSON
+    - SwiftyStoreKit
 
 EXTERNAL SOURCES:
   SwiftValidator:
@@ -101,7 +104,8 @@ SPEC CHECKSUMS:
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   SwiftValidator: 25ded5ca1f10c05adf57f6ac82a72d28ac8d91af
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
+  SwiftyStoreKit: 9ebd15971e28aa2989825fe8bc092eb5f75dd0b2
 
-PODFILE CHECKSUM: a3b92381d9f8976aabff9af23c76279a09b92128
+PODFILE CHECKSUM: ab5ed791e7c4dc011039f397b59dfb395a6740fd
 
 COCOAPODS: 1.5.3

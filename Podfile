@@ -14,5 +14,6 @@ pod 'Firebase/Database'
 pod 'JSQMessagesViewController'
 pod 'SwiftValidator', :git => 'https://github.com/jpotts18/SwiftValidator.git', :branch => 'master'
 pod 'SwiftyJSON'
+pod 'SwiftyStoreKit'
 
 end
