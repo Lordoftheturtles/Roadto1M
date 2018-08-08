@@ -19,7 +19,6 @@
 		55A480F9210DDA16002C6B40 /* ChatPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A480F8210DDA16002C6B40 /* ChatPageViewController.swift */; };
 		55A480FF210E0089002C6B40 /* EmailListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A480FE210E0089002C6B40 /* EmailListViewController.swift */; };
 		55A48102210EE3F8002C6B40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55A48100210EE3F8002C6B40 /* Main.storyboard */; };
-		55DE95AC2114D6CE005E97CA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE95AB2114D6CE005E97CA /* Extensions.swift */; };
 		55DE95AF2114E0B7005E97CA /* EmailList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55DE95AE2114E0B7005E97CA /* EmailList.storyboard */; };
 		55DE95B12114E0CB005E97CA /* Upgrade.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55DE95B02114E0CB005E97CA /* Upgrade.storyboard */; };
 		55DE95B32114E0D8005E97CA /* ChatView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55DE95B22114E0D8005E97CA /* ChatView.storyboard */; };
@@ -47,7 +46,6 @@
 		55A480F8210DDA16002C6B40 /* ChatPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPageViewController.swift; sourceTree = "<group>"; };
 		55A480FE210E0089002C6B40 /* EmailListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailListViewController.swift; sourceTree = "<group>"; };
 		55A48101210EE3F8002C6B40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		55DE95AB2114D6CE005E97CA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		55DE95AE2114E0B7005E97CA /* EmailList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmailList.storyboard; sourceTree = "<group>"; };
 		55DE95B02114E0CB005E97CA /* Upgrade.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Upgrade.storyboard; sourceTree = "<group>"; };
 		55DE95B22114E0D8005E97CA /* ChatView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatView.storyboard; sourceTree = "<group>"; };
@@ -116,7 +114,6 @@
 			isa = PBXGroup;
 			children = (
 				55198DE021104CB6009C9CD7 /* User+CoreDataProperties.swift */,
-				55DE95AB2114D6CE005E97CA /* Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -338,7 +335,6 @@
 			files = (
 				55A480F7210DD376002C6B40 /* Constants.swift in Sources */,
 				55198DDE21104549009C9CD7 /* PersistenceService.swift in Sources */,
-				55DE95AC2114D6CE005E97CA /* Extensions.swift in Sources */,
 				553BB2EF2113687B0013E00D /* UpgradeNowVC.swift in Sources */,
 				55A480F9210DDA16002C6B40 /* ChatPageViewController.swift in Sources */,
 				55E855E6210D758F00A03B4A /* ViewController.swift in Sources */,
