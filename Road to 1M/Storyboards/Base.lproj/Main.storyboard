@@ -43,8 +43,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="UpgradeButtonHomeScreen"/>
                                 <connections>
-                                    <action selector="upgradeButtonTabbed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6uq-Oh-twC"/>
-                                    <segue destination="PxG-iW-ySL" kind="show" identifier="benefitsSegue" id="Q1w-sh-Hkv"/>
+                                    <action selector="upgradeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ykm-if-pEE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4az-fJ-MXg">
@@ -112,6 +111,7 @@
                         <outlet property="textFieldMainScreen" destination="Lq2-t5-lDr" id="Gh5-Sv-f8u"/>
                         <outlet property="twitterShareButton" destination="brA-8w-IgU" id="res-JG-DD2"/>
                         <outlet property="upgradeButton" destination="9Od-6G-Rfd" id="bfN-Ms-eHv"/>
+                        <segue destination="PxG-iW-ySL" kind="show" identifier="benefitSegue" id="rQY-e6-Zh7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

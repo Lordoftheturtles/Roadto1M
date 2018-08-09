@@ -11,6 +11,7 @@
 		55198DE121104CB6009C9CD7 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55198DDF21104CB6009C9CD7 /* User+CoreDataClass.swift */; };
 		55198DE221104CB6009C9CD7 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55198DE021104CB6009C9CD7 /* User+CoreDataProperties.swift */; };
 		55198DE421106B75009C9CD7 /* SwiftValidator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55198DE321106B75009C9CD7 /* SwiftValidator.framework */; };
+		55262901211C61B000E83731 /* SwiftyStoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55262900211C61B000E83731 /* SwiftyStoreKit.framework */; };
 		552D8E84211473E8008AEE93 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 552D8E83211473E8008AEE93 /* StoreKit.framework */; };
 		553BB2EF2113687B0013E00D /* UpgradeNowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB2EE2113687B0013E00D /* UpgradeNowVC.swift */; };
 		55A480ED210D8FEB002C6B40 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55A480EC210D8FEB002C6B40 /* GoogleService-Info.plist */; };
@@ -36,6 +37,7 @@
 		55198DDF21104CB6009C9CD7 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		55198DE021104CB6009C9CD7 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		55198DE321106B75009C9CD7 /* SwiftValidator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftValidator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55262900211C61B000E83731 /* SwiftyStoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyStoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		552D8E83211473E8008AEE93 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		553BB2EE2113687B0013E00D /* UpgradeNowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeNowVC.swift; sourceTree = "<group>"; };
 		55A480EB210D8F3B002C6B40 /* Road to 1M.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Road to 1M.entitlements"; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55262901211C61B000E83731 /* SwiftyStoreKit.framework in Frameworks */,
 				552D8E84211473E8008AEE93 /* StoreKit.framework in Frameworks */,
 				55198DE421106B75009C9CD7 /* SwiftValidator.framework in Frameworks */,
 				9A58F5EB0A1DD8B8E798DE63 /* Pods_Road_to_1M.framework in Frameworks */,
@@ -180,6 +183,7 @@
 		EED45493AE580E9BE389B6B8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				55262900211C61B000E83731 /* SwiftyStoreKit.framework */,
 				552D8E83211473E8008AEE93 /* StoreKit.framework */,
 				55198DE321106B75009C9CD7 /* SwiftValidator.framework */,
 				542FCD1CE845CAB470A92BB9 /* Pods_Road_to_1M.framework */,
