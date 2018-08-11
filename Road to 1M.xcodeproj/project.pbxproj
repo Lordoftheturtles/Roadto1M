@@ -14,6 +14,12 @@
 		55262901211C61B000E83731 /* SwiftyStoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55262900211C61B000E83731 /* SwiftyStoreKit.framework */; };
 		552D8E84211473E8008AEE93 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 552D8E83211473E8008AEE93 /* StoreKit.framework */; };
 		553BB2EF2113687B0013E00D /* UpgradeNowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB2EE2113687B0013E00D /* UpgradeNowVC.swift */; };
+		55963C8F211EFCC6008B8A1A /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55963C8E211EFCC6008B8A1A /* loginViewController.swift */; };
+		55963C91211F16E1008B8A1A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55963C90211F16E1008B8A1A /* SignUpViewController.swift */; };
+		55963C95211F179D008B8A1A /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55963C94211F179D008B8A1A /* SignUp.storyboard */; };
+		55963C97211F17B1008B8A1A /* ForgotPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55963C96211F17B1008B8A1A /* ForgotPassword.storyboard */; };
+		55963C99211F1D26008B8A1A /* forgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55963C98211F1D26008B8A1A /* forgotPasswordViewController.swift */; };
+		55963C9B211F2BFA008B8A1A /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55963C9A211F2BFA008B8A1A /* AlertController.swift */; };
 		55A480ED210D8FEB002C6B40 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55A480EC210D8FEB002C6B40 /* GoogleService-Info.plist */; };
 		55A480F1210DABF4002C6B40 /* chatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A480F0210DABF4002C6B40 /* chatViewController.swift */; };
 		55A480F7210DD376002C6B40 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A480F6210DD376002C6B40 /* Constants.swift */; };
@@ -40,6 +46,12 @@
 		55262900211C61B000E83731 /* SwiftyStoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyStoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		552D8E83211473E8008AEE93 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		553BB2EE2113687B0013E00D /* UpgradeNowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeNowVC.swift; sourceTree = "<group>"; };
+		55963C8E211EFCC6008B8A1A /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
+		55963C90211F16E1008B8A1A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		55963C94211F179D008B8A1A /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
+		55963C96211F17B1008B8A1A /* ForgotPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgotPassword.storyboard; sourceTree = "<group>"; };
+		55963C98211F1D26008B8A1A /* forgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forgotPasswordViewController.swift; sourceTree = "<group>"; };
+		55963C9A211F2BFA008B8A1A /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		55A480EB210D8F3B002C6B40 /* Road to 1M.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Road to 1M.entitlements"; sourceTree = "<group>"; };
 		55A480EC210D8FEB002C6B40 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		55A480F0210DABF4002C6B40 /* chatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +101,10 @@
 		55198DE521109238009C9CD7 /* CONTROLLER */ = {
 			isa = PBXGroup;
 			children = (
+				55963C98211F1D26008B8A1A /* forgotPasswordViewController.swift */,
+				55963C8E211EFCC6008B8A1A /* loginViewController.swift */,
+				55963C90211F16E1008B8A1A /* SignUpViewController.swift */,
+				55963C9A211F2BFA008B8A1A /* AlertController.swift */,
 				55A480FE210E0089002C6B40 /* EmailListViewController.swift */,
 				553BB2EE2113687B0013E00D /* UpgradeNowVC.swift */,
 				55A480F8210DDA16002C6B40 /* ChatPageViewController.swift */,
@@ -126,6 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				55A48100210EE3F8002C6B40 /* Main.storyboard */,
+				55963C94211F179D008B8A1A /* SignUp.storyboard */,
+				55963C96211F17B1008B8A1A /* ForgotPassword.storyboard */,
 				55DE95AE2114E0B7005E97CA /* EmailList.storyboard */,
 				55DE95B02114E0CB005E97CA /* Upgrade.storyboard */,
 				55DE95B22114E0D8005E97CA /* ChatView.storyboard */,
@@ -255,8 +273,10 @@
 				55E855F1210D759B00A03B4A /* LaunchScreen.storyboard in Resources */,
 				55DE95B12114E0CB005E97CA /* Upgrade.storyboard in Resources */,
 				55DE95AF2114E0B7005E97CA /* EmailList.storyboard in Resources */,
+				55963C97211F17B1008B8A1A /* ForgotPassword.storyboard in Resources */,
 				55E855EE210D759B00A03B4A /* Assets.xcassets in Resources */,
 				55A480ED210D8FEB002C6B40 /* GoogleService-Info.plist in Resources */,
+				55963C95211F179D008B8A1A /* SignUp.storyboard in Resources */,
 				55A48102210EE3F8002C6B40 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,6 +313,7 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
@@ -308,6 +329,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
@@ -329,6 +351,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55963C99211F1D26008B8A1A /* forgotPasswordViewController.swift in Sources */,
+				55963C9B211F2BFA008B8A1A /* AlertController.swift in Sources */,
 				55A480F7210DD376002C6B40 /* Constants.swift in Sources */,
 				55198DDE21104549009C9CD7 /* PersistenceService.swift in Sources */,
 				553BB2EF2113687B0013E00D /* UpgradeNowVC.swift in Sources */,
@@ -337,8 +361,10 @@
 				55E855E4210D758F00A03B4A /* AppDelegate.swift in Sources */,
 				55198DE121104CB6009C9CD7 /* User+CoreDataClass.swift in Sources */,
 				55A480F1210DABF4002C6B40 /* chatViewController.swift in Sources */,
+				55963C8F211EFCC6008B8A1A /* loginViewController.swift in Sources */,
 				55A480FF210E0089002C6B40 /* EmailListViewController.swift in Sources */,
 				55198DE221104CB6009C9CD7 /* User+CoreDataProperties.swift in Sources */,
+				55963C91211F16E1008B8A1A /* SignUpViewController.swift in Sources */,
 				55E855EC210D758F00A03B4A /* Road_to_1M.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

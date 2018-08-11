@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Road to 1M/CONTROLLER/ViewController.swift"
-            timestampString = "555510598.82414"
+            timestampString = "555698153.563785"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "isUserLoggedIn()"
             landmarkType = "7">
          </BreakpointContent>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mLG-C4-Oj2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="w6K-GH-Sew">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,93 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--ForgotPassword-->
+        <scene sceneID="SeO-6h-alf">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ForgotPassword" storyboardName="ForgotPassword" id="ywM-vz-Oqq" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pcc-4M-eDA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1218" y="-166"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="dQz-Ml-FWt">
+            <objects>
+                <viewController storyboardIdentifier="loginViewController" id="w6K-GH-Sew" customClass="loginViewController" customModule="Road_to_1M" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cYc-3C-oEK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LoginScreenMAIN" translatesAutoresizingMaskIntoConstraints="NO" id="6Jl-mT-NQM">
+                                <rect key="frame" x="-2" y="0.0" width="381" height="673"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1MLOGO" translatesAutoresizingMaskIntoConstraints="NO" id="4EX-4a-9dP">
+                                <rect key="frame" x="132" y="70" width="96" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCw-pl-iEC">
+                                <rect key="frame" x="109" y="421" width="177" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="CONFIRMICON"/>
+                                <connections>
+                                    <action selector="confirmButtonTapped:" destination="w6K-GH-Sew" eventType="touchUpInside" id="NQt-i1-mzO"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cFF-bm-hCi">
+                                <rect key="frame" x="26" y="383" width="326" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4s0-5i-SoE">
+                                <rect key="frame" x="27" y="304" width="326" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYr-JK-R9P">
+                                <rect key="frame" x="152" y="480" width="57" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Register"/>
+                                <connections>
+                                    <action selector="registerButtonTapped:" destination="w6K-GH-Sew" eventType="touchUpInside" id="LtE-Tn-6FV"/>
+                                    <segue destination="8lF-or-FaD" kind="show" identifier="signUpSegue" id="M0o-Fs-Rqe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCL-ft-lrp">
+                                <rect key="frame" x="102" y="617" width="157" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Forgot your password?"/>
+                                <connections>
+                                    <action selector="forgotPasswordButtonTapped:" destination="w6K-GH-Sew" eventType="touchUpInside" id="Kag-av-wyk"/>
+                                    <segue destination="ywM-vz-Oqq" kind="show" identifier="forgotPasswordSegue" id="wye-VU-SDf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="SdE-pu-p95"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="exc-sc-y7p"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="4s0-5i-SoE" id="yZH-xm-JgQ"/>
+                        <outlet property="passwordTextField" destination="cFF-bm-hCi" id="jFt-9Z-P8G"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="logInSegue" id="ZRe-Wo-nCt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k0a-aT-tF5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1110" y="333"/>
+        </scene>
+        <!--SignUp-->
+        <scene sceneID="nkj-ec-QVE">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SignUp" id="8lF-or-FaD" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vwS-KN-988" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1218" y="762"/>
+        </scene>
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -30,22 +117,6 @@
                                 <rect key="frame" x="-300" y="152" width="290" height="365"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3g-xx-CXv">
-                                <rect key="frame" x="-200" y="238" width="180" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="ContinueButtonHomeScreen"/>
-                                <connections>
-                                    <action selector="continueButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rQF-Ok-aoL"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Od-6G-Rfd">
-                                <rect key="frame" x="-200" y="312" width="180" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="UpgradeButtonHomeScreen"/>
-                                <connections>
-                                    <action selector="upgradeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ykm-if-pEE"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4az-fJ-MXg">
                                 <rect key="frame" x="65" y="-100" width="97" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -93,6 +164,28 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="InstagramShareButton"/>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logged in area" translatesAutoresizingMaskIntoConstraints="NO" id="H08-z3-f1N">
+                                <rect key="frame" x="-2" y="616" width="385" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxy-qP-6LG">
+                                <rect key="frame" x="55" y="631" width="250" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciQ-xn-IaU">
+                                <rect key="frame" x="305" y="625" width="71" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" red="0.96827524900436401" green="0.4212157130241394" blue="0.10710430890321732" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signOutButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ODd-WS-Bwr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -101,22 +194,22 @@
                     <connections>
                         <outlet property="businessIconButton" destination="Rrp-Li-jCE" id="TYp-hD-hxI"/>
                         <outlet property="chatIconButton" destination="vjg-qn-jY8" id="8Ef-pB-QLy"/>
-                        <outlet property="continueButton" destination="h3g-xx-CXv" id="QZ9-cU-d5y"/>
                         <outlet property="emailListButton" destination="4az-fJ-MXg" id="eks-3D-rgo"/>
                         <outlet property="fbSharebutton" destination="ZfG-at-KYN" id="SZB-Qh-9qd"/>
                         <outlet property="findNicheButton" destination="4mG-Jw-XG4" id="bW3-bW-DRy"/>
                         <outlet property="instagramShareButton" destination="FpK-7v-akl" id="d4I-7Z-we1"/>
+                        <outlet property="loggedInLabel" destination="qxy-qP-6LG" id="FrT-D9-299"/>
                         <outlet property="logoMainScreen" destination="eQy-Qx-zO0" id="VmE-VL-bfS"/>
                         <outlet property="sharingText" destination="7uM-7v-0PQ" id="Aba-XB-ujP"/>
                         <outlet property="textFieldMainScreen" destination="Lq2-t5-lDr" id="Gh5-Sv-f8u"/>
                         <outlet property="twitterShareButton" destination="brA-8w-IgU" id="res-JG-DD2"/>
-                        <outlet property="upgradeButton" destination="9Od-6G-Rfd" id="bfN-Ms-eHv"/>
                         <segue destination="PxG-iW-ySL" kind="show" identifier="benefitSegue" id="rQY-e6-Zh7"/>
+                        <segue destination="w6K-GH-Sew" kind="show" identifier="signOutSegue" id="iUn-fU-7GS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1046" y="319"/>
+            <point key="canvasLocation" x="1984.8" y="318.89055472263868"/>
         </scene>
         <!--EmailList-->
         <scene sceneID="0J3-UW-KQr">
@@ -124,7 +217,7 @@
                 <viewControllerPlaceholder storyboardName="EmailList" id="0rl-ps-BHP" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xZJ-Vv-SLB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1813" y="123"/>
+            <point key="canvasLocation" x="2751.1999999999998" y="122.33883058470765"/>
         </scene>
         <!--ChatView-->
         <scene sceneID="RZr-xq-mvG">
@@ -132,7 +225,7 @@
                 <viewControllerPlaceholder storyboardName="ChatView" id="DBn-YS-GZ8" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Slw-4D-oi2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1847" y="278"/>
+            <point key="canvasLocation" x="2785.5999999999999" y="277.9610194902549"/>
         </scene>
         <!--Upgrade-->
         <scene sceneID="J5S-eY-Yqr">
@@ -140,40 +233,23 @@
                 <viewControllerPlaceholder storyboardName="Upgrade" id="PxG-iW-ySL" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7hI-z9-px6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1794" y="470"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Dfm-dS-wlQ">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mLG-C4-Oj2" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="A6h-WT-HTu">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="nZk-Vw-euJ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Q7S-YD-K7g" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1047" y="-451"/>
+            <point key="canvasLocation" x="2732.8000000000002" y="469.56521739130437"/>
         </scene>
     </scenes>
     <resources>
         <image name="1MLOGO" width="96" height="48"/>
         <image name="BusinessIconNAVPage" width="97" height="89"/>
+        <image name="CONFIRMICON" width="177" height="41"/>
         <image name="ChatIconNAVPAGE" width="97" height="90"/>
-        <image name="ContinueButtonHomeScreen" width="180" height="45"/>
         <image name="EmailListIcon" width="97" height="90"/>
         <image name="FBShareButton" width="51" height="51"/>
         <image name="Homescreen" width="375" height="667"/>
         <image name="InstagramShareButton" width="51" height="51"/>
+        <image name="Logged in area" width="375" height="51"/>
+        <image name="LoginScreenMAIN" width="375" height="667"/>
         <image name="NicheIconNAVPage" width="97" height="88"/>
         <image name="SharingText" width="125" height="14"/>
         <image name="TextFieldHomescreen" width="294" height="369"/>
         <image name="TwitterShareButton" width="47" height="47"/>
-        <image name="UpgradeButtonHomeScreen" width="180" height="45"/>
     </resources>
 </document>
