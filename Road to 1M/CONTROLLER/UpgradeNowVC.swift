@@ -18,12 +18,12 @@ import SwiftyStoreKit
 ////////////////////////////////////////////////////////////
 
 // UIViewController
-var sharedSecret = "a2f4003ecf084c0aab731fd415c09553"
+
 
 
 enum RegisteredPurchase : String {
-    case Premium = "premium"
-    case PremiumAutoRenew = "PremiumSubscription1M"
+    case Premium = "BetaPremium"
+    case PremiumAutoRenew = "GoldMember"
 }
 
 class NetworkActivityIndicatorManager : NSObject {
@@ -60,7 +60,7 @@ class UpgradeNowVC: UIViewController {
     @IBOutlet weak var cancelButton: UIButton!
     
     // Swifty StoreKit
-    let bundleID = "OneMillionAPP.Road-to-1M"
+    let bundleID = "OneMillionAPP.1M"
     
     var Premium = RegisteredPurchase.Premium
     var PremiumAutoRenew = RegisteredPurchase.PremiumAutoRenew
@@ -77,7 +77,6 @@ class UpgradeNowVC: UIViewController {
     }
     // Action of when upgrade button has been tapped!
   
-    
     @IBAction func homeButtonTapped(_ sender: UIBarButtonItem) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "homeViewController") as? UINavigationController
@@ -85,12 +84,12 @@ class UpgradeNowVC: UIViewController {
     }
 // StoreKit Action buttons
     @IBAction func oneTimePayButtonTapped(_ sender: UIButton) {
-        purchase(purchase: Premium)
+        self.purchase(purchase: Premium)
         print("One Time Pay Button Tapped")
     }
     
     @IBAction func becomeAMemberButtonTapped(_ sender: UIButton) {
-        purchase(purchase: PremiumAutoRenew)
+        self.purchase(purchase: PremiumAutoRenew)
         print("Become a Member Button Tapped!")
     }
     //Animation Buttons
@@ -138,7 +137,7 @@ func getInfo(purchase : RegisteredPurchase) {
         
     })
 }
-    
+    //
 func purchase(purchase: RegisteredPurchase) {
     NetworkActivityIndicatorManager.NetworkOperationStarted()
     SwiftyStoreKit.purchaseProduct(bundleID + "." + purchase.rawValue, completion: {
@@ -150,6 +149,7 @@ func purchase(purchase: RegisteredPurchase) {
             }
             self.showAlert(Alert: self.alertForPurchaseResult(result: result))
         }
+
         
     })
 }

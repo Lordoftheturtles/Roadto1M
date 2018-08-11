@@ -106,13 +106,6 @@
 			path = MODEL;
 			sourceTree = "<group>";
 		};
-		55DE95A72114CAFE005E97CA /* VIEW */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = VIEW;
-			sourceTree = "<group>";
-		};
 		55DE95A92114CDDF005E97CA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,7 +158,6 @@
 				55DE95A92114CDDF005E97CA /* Extensions */,
 				55198DE521109238009C9CD7 /* CONTROLLER */,
 				55DE95A62114CABD005E97CA /* MODEL */,
-				55DE95A72114CAFE005E97CA /* VIEW */,
 				55DE95AD2114E067005E97CA /* Storyboards */,
 				55E855E3210D758F00A03B4A /* AppDelegate.swift */,
 				55A480EB210D8F3B002C6B40 /* Road to 1M.entitlements */,
@@ -501,7 +493,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "OneMillionAPP.Road-to-1M";
+				PRODUCT_BUNDLE_IDENTIFIER = OneMillionAPP.1M;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
@@ -524,7 +516,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "OneMillionAPP.Road-to-1M";
+				PRODUCT_BUNDLE_IDENTIFIER = OneMillionAPP.1M;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";

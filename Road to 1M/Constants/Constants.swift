@@ -10,6 +10,10 @@ import Firebase
 import FirebaseDatabase
 import UIKit
 
+
+
+var sharedSecret = "a2f4003ecf084c0aab731fd415c09553"
+
 struct Constants
 {
     struct refs
