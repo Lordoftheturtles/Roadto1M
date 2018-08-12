@@ -40,7 +40,7 @@ class forgotPasswordViewController: UIViewController {
     @IBAction func returnButtonTapped(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let _ = storyboard.instantiateViewController(withIdentifier: "loginViewController") as? UINavigationController
-        performSegue(withIdentifier: "returnToLogin", sender: nil)
+        performSegue(withIdentifier: "returnToLogIn", sender: nil)
     
 }
 }

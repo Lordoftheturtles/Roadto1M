@@ -24,11 +24,23 @@ import FirebaseAuth
 //performSegue(withIdentifier: "benefitSegue", sender: nil)
 //}
 
+//Properties stores across the Application
+
+
 
 
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var profileSlider: UIImageView!
+    @IBOutlet weak var usernameLabel: UILabel! //-248
+    @IBOutlet weak var emailLabel: UILabel!// -248
+    @IBOutlet weak var instagramLabel: UILabel! // -248
+    @IBOutlet weak var facebookLabel: UILabel! // -248
+    @IBOutlet weak var membershipStatusLabel: UILabel! // -248
+    @IBOutlet weak var upgradeMembershipButton: UIButton! // -248
+    // Membership Button Tapped
+    
     
     
     @IBOutlet weak var loggedInLabel: UILabel!
@@ -42,11 +54,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         animateHomeScreen()
         hideKeyboard()
+        
+        
         guard let username = Auth.auth().currentUser?.displayName else { return }
-        
+        guard let email = Auth.auth().currentUser?.email else { return }
         loggedInLabel.text = "Logged in as \(username)"
-        
+        usernameLabel.text = "\(username)"
+    emailLabel.text = "\(email)"
         }
+    
+    
     
     @IBOutlet weak var logoMainScreen: UIImageView!
     @IBOutlet weak var textFieldMainScreen: UIImageView!
@@ -61,7 +78,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var twitterShareButton: UIButton! //-236 3.2
     @IBOutlet weak var instagramShareButton: UIButton! // -236 3.4
     
-
+    @IBOutlet weak var returnProfileSlider: UIButton!
+    
 
     @IBAction func signOutButtonTapped(_ sender: UIButton) {
         //Performs function when signout has been tapped
@@ -75,29 +93,48 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func returnProfileSlide(_ sender: UIButton) {
 
-func isUserLoggedIn() {
-    if Auth.auth().currentUser != nil {
-        //User is logged in!
-        print("Has Access token")
-        //MARK:- SEGUE
-        //Perform segue to Chat controller
-        let storyboard = UIStoryboard(name: "ChatView", bundle: nil)
-        let _ = storyboard.instantiateViewController(withIdentifier: "chatViewController") as? UINavigationController
-        performSegue(withIdentifier: "chatViewSegue", sender: nil)
-    } else {
-        //User is logged out
-        let alert = UIAlertController(title: "Sorry", message: "You need to be logged in to use this function", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
-        print("Needs to be logged in")
-        self.present(alert, animated: true)
+        UIView.animate(withDuration: 1, delay: 0.2, options: .curveEaseOut, animations: {self.profileSlider.frame.origin.x += 267})
+        UIView.animate(withDuration: 1, delay: 0.2, options: .curveEaseOut, animations: {self.usernameLabel.frame.origin.x += 248})
+        UIView.animate(withDuration: 1, delay: 0.2, options: .curveEaseOut, animations: {self.emailLabel.frame.origin.x += 248})
+        UIView.animate(withDuration: 1, delay: 0.2, options: .curveEaseOut, animations: {self.instagramLabel.frame.origin.x += 248})
+        UIView.animate(withDuration: 1, delay: 0.2, options: .curveEaseOut, animations: {self.facebookLabel.frame.origin.x += 248})
+        UIView.animate(withDuration: 1, delay: 0.2, options: .curveEaseOut, animations: {self.membershipStatusLabel.frame.origin.x += 248})
+        UIView.animate(withDuration: 1, delay: 0.2, options: .curveEaseOut, animations: {self.upgradeMembershipButton.frame.origin.x += 248})
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseOut, animations: {self.returnProfileSlider.frame.origin.x -= 150})
     }
-}
+    
+    
 //// BUTTON ACTIONS
+    
+    @IBAction func profileButtonTapped(_ sender: UIButton) {
+         UIView.animate(withDuration: 1, delay: 0.2, options: .curveEaseOut, animations: {self.profileSlider.frame.origin.x -= 267})
+        UIView.animate(withDuration: 1, delay: 0.2, options: .curveEaseOut, animations: {self.usernameLabel.frame.origin.x -= 248})
+        UIView.animate(withDuration: 1, delay: 0.2, options: .curveEaseOut, animations: {self.emailLabel.frame.origin.x -= 248})
+        UIView.animate(withDuration: 1, delay: 0.2, options: .curveEaseOut, animations: {self.instagramLabel.frame.origin.x -= 248})
+        UIView.animate(withDuration: 1, delay: 0.2, options: .curveEaseOut, animations: {self.facebookLabel.frame.origin.x -= 248})
+        UIView.animate(withDuration: 1, delay: 0.2, options: .curveEaseOut, animations: {self.membershipStatusLabel.frame.origin.x -= 248})
+        UIView.animate(withDuration: 1, delay: 0.2, options: .curveEaseOut, animations: {self.upgradeMembershipButton.frame.origin.x -= 248})
+         UIView.animate(withDuration: 1, delay: 0, options: .curveEaseOut, animations: {self.returnProfileSlider.frame.origin.x += 150})
+        
+        print("Animating Profile SlideBar")
+    }
+    
+    
+@IBAction func upgradeMembershipButtonTapped(_ sender: UIButton) {
+    let storyboard = UIStoryboard(name: "Upgrade", bundle: nil)
+    let _ = storyboard.instantiateViewController(withIdentifier: "benefitsViewController") as? UINavigationController
+    performSegue(withIdentifier: "benefitSegue", sender: nil)
+}
 
 
 @IBAction func chatIconTapped(_ sender: UIButton) {
-    isUserLoggedIn()
+    // Perform Segue to chat view
+    let storyboard = UIStoryboard(name: "ChatView", bundle: nil)
+    let _ = storyboard.instantiateViewController(withIdentifier: "chatViewController") as? UINavigationController
+    performSegue(withIdentifier: "chatViewSegue", sender: nil)
+    print("Sending user to chat view controller")
 }
 
 @IBAction func emailListButtonTapped(_ sender: UIButton) {
@@ -109,6 +146,8 @@ func isUserLoggedIn() {
 }
 //NAVIGATION
     //MARK:- ANIMATIONS
+    
+    
     func animateHomeScreen() {
         UIView.animate(withDuration: 1, delay: 0.5, options: .curveEaseOut, animations: {self.emailListButton.frame.origin.y += 282})
         UIView.animate(withDuration: 1, delay: 1, options: .curveEaseOut, animations: {self.chatIconButton.frame.origin.y += 282})
@@ -135,4 +174,8 @@ extension UIViewController {
         view.endEditing(true)
     }
     
+    
 }
+
+
+

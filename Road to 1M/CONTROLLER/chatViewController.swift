@@ -15,30 +15,12 @@ class chatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
         animateUponLoad()
-        
-        
-        let loginButton = FBSDKLoginButton()
-        view.addSubview(loginButton)
-        loginButton.frame = CGRect.init(x: 0, y: 620, width: view.frame.width, height: 50)
-        
-        if (FBSDKAccessToken.current()) != nil  {
-            //User is logged in, do work such as go to next view controller
-            print("Has Access token")
-        } else {
-            //Remove User from page
-            let alert = UIAlertController(title: "Sorry", message: "You need to be logged in to use this function", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
-            print("Kicked Out out chat due to not being online")
-            self.present(alert, animated: true)
-            performSegue(withIdentifier: "kickedOut", sender: self)
-        }
-        
     }
     //MARK:- CHAT OUTLETS
    
     @IBOutlet weak var joinChatRoom: UIButton!
+    @IBOutlet weak var returnButton: UIButton!
     
     
     
@@ -49,9 +31,9 @@ class chatViewController: UIViewController {
        
         
     }
-    @IBAction func chatToHome(_ sender: Any) {
+    @IBAction func returnButtonTapped(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "homeViewController") as? UINavigationController
+        let _ = storyboard.instantiateViewController(withIdentifier: "homeViewController") as? UINavigationController
         performSegue(withIdentifier: "chatToHome", sender: nil)
     }
     

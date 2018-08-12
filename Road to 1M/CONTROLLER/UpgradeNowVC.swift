@@ -20,7 +20,6 @@ import SwiftyStoreKit
 // UIViewController
 
 
-
 enum RegisteredPurchase : String {
     case Premium = "BetaPremium"
     case PremiumAutoRenew = "GoldMember"
@@ -47,9 +46,6 @@ class NetworkActivityIndicatorManager : NSObject {
 }
 
 class UpgradeNowVC: UIViewController {
-    
-    let token = FBSDKAccessToken.current()
-    let currentToken = FBSDKAccessToken.currentAccessTokenIsActive()
     
     @IBOutlet weak var oneTimePay: UIButton!
     @IBOutlet weak var becomeAMember: UIButton!
@@ -79,7 +75,7 @@ class UpgradeNowVC: UIViewController {
   
     @IBAction func homeButtonTapped(_ sender: UIBarButtonItem) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "homeViewController") as? UINavigationController
+        let _ = storyboard.instantiateViewController(withIdentifier: "homeViewController") as? UINavigationController
         performSegue(withIdentifier: "benefitsToHome", sender: nil)
     }
 // StoreKit Action buttons
@@ -137,8 +133,8 @@ func getInfo(purchase : RegisteredPurchase) {
         
     })
 }
-    //
-func purchase(purchase: RegisteredPurchase) {
+    
+    func purchase(purchase: RegisteredPurchase) {
     NetworkActivityIndicatorManager.NetworkOperationStarted()
     SwiftyStoreKit.purchaseProduct(bundleID + "." + purchase.rawValue, completion: {
         result in

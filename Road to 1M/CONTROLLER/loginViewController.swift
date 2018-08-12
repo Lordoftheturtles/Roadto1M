@@ -17,14 +17,35 @@ import FirebaseAuth
 class loginViewController: UIViewController {
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboard()
+        isCurrentUserLoggedIn() // MARK:- Login, Checks to see if user is logged in
         
     }
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    
+    
+    //MARK:- Login
+    func isCurrentUserLoggedIn() {
+        if Auth.auth().currentUser != nil {
+            //Perform Segue
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let _ = storyboard.instantiateViewController(withIdentifier: "homeViewController") as? UINavigationController
+            performSegue(withIdentifier: "logInSegue", sender: nil)
+            print("User has been logged in!")
+        } else {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let _ = storyboard.instantiateViewController(withIdentifier: "loginViewController") as? UINavigationController
+            performSegue(withIdentifier: "signOutSegue", sender: nil)
+            print("User could not be logged in!")
+           
+        }
+        
+    }
     
     
     
