@@ -28,7 +28,7 @@
                                 <state key="normal" image="REGISTERICON"/>
                                 <connections>
                                     <action selector="registerButtonTapped:" destination="2uw-GV-SbA" eventType="touchUpInside" id="ord-gu-Sdr"/>
-                                    <segue destination="SId-le-vlb" kind="show" identifier="registerSegue" id="6gn-TN-pwI"/>
+                                    <segue destination="SId-le-vlb" kind="show" identifier="registerSegue" customClass="homeViewController" id="6gn-TN-pwI"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yj6-pQ-f9Y">
@@ -62,7 +62,7 @@
                                 <state key="normal" image="SignInButton"/>
                                 <connections>
                                     <action selector="signInButtonTapped:" destination="2uw-GV-SbA" eventType="touchUpInside" id="aTY-SC-bpi"/>
-                                    <segue destination="eJV-GY-Gxf" kind="show" identifier="signInSegue" id="94Y-Il-0cF"/>
+                                    <segue destination="eJV-GY-Gxf" kind="show" identifier="signInSegue" customClass="loginViewController" customModule="Road_to_1M" customModuleProvider="target" id="94Y-Il-0cF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -80,18 +80,18 @@
             </objects>
             <point key="canvasLocation" x="252" y="-22.938530734632685"/>
         </scene>
-        <!--Main-->
+        <!--loginViewController-->
         <scene sceneID="hjT-55-4Sa">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="eJV-GY-Gxf" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="loginViewController" id="eJV-GY-Gxf" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FDF-8A-qa5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-216" y="431"/>
         </scene>
-        <!--Main-->
+        <!--homeViewController-->
         <scene sceneID="yzZ-By-OQZ">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="SId-le-vlb" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="homeViewController" id="SId-le-vlb" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mO8-f3-qu0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="389" y="431"/>

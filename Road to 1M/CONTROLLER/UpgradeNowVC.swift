@@ -73,11 +73,17 @@ class UpgradeNowVC: UIViewController {
     }
     // Action of when upgrade button has been tapped!
   
-    @IBAction func homeButtonTapped(_ sender: UIBarButtonItem) {
+    
+    @IBAction func returnButtonTapped(_ sender: UIButton) {
+        // Takes user to Home Screen
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let _ = storyboard.instantiateViewController(withIdentifier: "homeViewController") as? UINavigationController
         performSegue(withIdentifier: "benefitsToHome", sender: nil)
+        
+        
+        print("Please take me to home screen")
     }
+    
 // StoreKit Action buttons
     @IBAction func oneTimePayButtonTapped(_ sender: UIButton) {
         self.purchase(purchase: Premium)

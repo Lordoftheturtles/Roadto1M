@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Chat Home-->
+        <!--Chat View Controller-->
         <scene sceneID="5ZC-Jz-jPp">
             <objects>
                 <viewController storyboardIdentifier="chatViewController" id="lyk-N6-7Pt" customClass="chatViewController" customModule="Road_to_1M" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,6 +22,10 @@
                                 <rect key="frame" x="-9" y="-7" width="393" height="680"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TextFieldHomescreen" translatesAutoresizingMaskIntoConstraints="NO" id="e8f-Nh-4tI">
+                                <rect key="frame" x="-9" y="141" width="393" height="307"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXp-wh-BT0">
                                 <rect key="frame" x="-200" y="224" width="200" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -31,28 +35,18 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hd7-fb-9Kv">
-                                <rect key="frame" x="137" y="302" width="100" height="31"/>
+                                <rect key="frame" x="137" y="318" width="100" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="returnButton"/>
                                 <connections>
                                     <action selector="returnButtonTapped:" destination="lyk-N6-7Pt" eventType="touchUpInside" id="cDs-ga-2O9"/>
+                                    <segue destination="PKY-x7-VrH" kind="show" identifier="chatToHome" id="6TQ-xS-F2Z"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TextFieldHomescreen" translatesAutoresizingMaskIntoConstraints="NO" id="e8f-Nh-4tI">
-                                <rect key="frame" x="46" y="150" width="282" height="274"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="LLt-Uj-eP0"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Chat Home" id="gev-CE-wCS">
-                        <barButtonItem key="leftBarButtonItem" title="Home" id="Rea-Ku-D9e">
-                            <connections>
-                                <segue destination="PKY-x7-VrH" kind="show" identifier="chatToHome" id="PaJ-Cm-s5s"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                     <connections>
                         <outlet property="joinChatRoom" destination="bXp-wh-BT0" id="37v-Qx-MJL"/>
                         <outlet property="returnButton" destination="Hd7-fb-9Kv" id="RFm-W0-BeC"/>
@@ -62,10 +56,10 @@
             </objects>
             <point key="canvasLocation" x="2976.8000000000002" y="318.89055472263868"/>
         </scene>
-        <!--Main-->
+        <!--homeViewController-->
         <scene sceneID="sth-zE-atJ">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="PKY-x7-VrH" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="homeViewController" id="PKY-x7-VrH" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2gi-1A-hcg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2671" y="731"/>
@@ -77,6 +71,16 @@
                     <view key="view" contentMode="scaleToFill" id="pwr-Cm-qdy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Y5-qI-Q7k">
+                                <rect key="frame" x="0.0" y="0.0" width="78" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Chat Home"/>
+                                <connections>
+                                    <segue destination="lyk-N6-7Pt" kind="show" id="ijv-Cx-4Wo"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dNX-EZ-AgW"/>
                     </view>
@@ -84,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DUx-DF-II1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3942" y="319"/>
+            <point key="canvasLocation" x="3941.5999999999999" y="318.89055472263868"/>
         </scene>
     </scenes>
     <resources>

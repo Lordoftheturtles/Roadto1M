@@ -70,10 +70,10 @@
             </objects>
             <point key="canvasLocation" x="3272.8000000000002" y="-833.43328335832086"/>
         </scene>
-        <!--Main-->
+        <!--homeViewController-->
         <scene sceneID="Aab-Yw-pdw">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="Nbj-mb-coy" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="homeViewController" id="Nbj-mb-coy" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gml-E9-sMI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3881" y="-1080"/>

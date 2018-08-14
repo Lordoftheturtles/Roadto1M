@@ -11,43 +11,38 @@ import CoreData
 import Firebase
 import FirebaseAuth
 
-// Implementing a login screen instead of using facebook, having it send to Firebase. Able to sign in, and sign out at homescreen, Forgot password feature
-// and a register feature
+
 
 class loginViewController: UIViewController {
-    
+    let context = PersistenceServce.context
+    var user: [User] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboard()
-        isCurrentUserLoggedIn() // MARK:- Login, Checks to see if user is logged in
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        // IS THE USER LOGGED IN??
+        if Auth.auth().currentUser != nil {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let _ = storyboard.instantiateViewController(withIdentifier: "homeViewController") as? UINavigationController
+            performSegue(withIdentifier: "logInSegue", sender: nil)
+        } else {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            storyboard.instantiateInitialViewController()
+        }
+    }
+    
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
     
     //MARK:- Login
-    func isCurrentUserLoggedIn() {
-        if Auth.auth().currentUser != nil {
-            //Perform Segue
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let _ = storyboard.instantiateViewController(withIdentifier: "homeViewController") as? UINavigationController
-            performSegue(withIdentifier: "logInSegue", sender: nil)
-            print("User has been logged in!")
-        } else {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let _ = storyboard.instantiateViewController(withIdentifier: "loginViewController") as? UINavigationController
-            performSegue(withIdentifier: "signOutSegue", sender: nil)
-            print("User could not be logged in!")
-           
-        }
-        
-    }
-    
-    
     
     @IBAction func confirmButtonTapped(_ sender: UIButton) {
             guard let email = emailTextField.text,
@@ -85,6 +80,6 @@ class loginViewController: UIViewController {
         let _ = storyboard.instantiateViewController(withIdentifier: "forgotPasswordViewController") as? UINavigationController
         performSegue(withIdentifier: "forgotPasswordSegue", sender: nil)
     }
-   
+    
 }
 

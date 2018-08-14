@@ -10,13 +10,13 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main-->
+        <!--homeViewController-->
         <scene sceneID="Dct-jc-re4">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="Ulh-an-Q8J" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="homeViewController" id="Ulh-an-Q8J" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qr8-ly-mBa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1768" y="-535"/>
+            <point key="canvasLocation" x="1835" y="-536"/>
         </scene>
         <!--Benefits-->
         <scene sceneID="9Ge-Yf-eA9">
@@ -74,6 +74,15 @@
                                     <action selector="cancelButtonTapped:" destination="0Ec-Y5-npg" eventType="touchUpInside" id="WoM-Rd-aKh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKJ-gG-5Tw">
+                                <rect key="frame" x="157" y="39" width="59" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Return"/>
+                                <connections>
+                                    <action selector="returnButtonTapped:" destination="0Ec-Y5-npg" eventType="touchUpInside" id="4Af-ot-3uM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="L16-KU-FEL"/>
@@ -81,7 +90,6 @@
                     <navigationItem key="navigationItem" title="Benefits" id="WKy-q2-Oug">
                         <barButtonItem key="leftBarButtonItem" title="Home" id="5BH-bP-fUp">
                             <connections>
-                                <action selector="homeButtonTapped:" destination="0Ec-Y5-npg" id="4Dj-Oz-e7c"/>
                                 <segue destination="Ulh-an-Q8J" kind="show" identifier="benefitsToHome" id="G88-hs-5OD"/>
                             </connections>
                         </barButtonItem>
