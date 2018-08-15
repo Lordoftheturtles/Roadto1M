@@ -148,6 +148,9 @@
                                 <rect key="frame" x="65" y="-100" width="97" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="BusinessIconNAVPage"/>
+                                <connections>
+                                    <action selector="businessIconButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9u6-i9-2BD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mG-Jw-XG4">
                                 <rect key="frame" x="218" y="-100" width="97" height="91"/>
@@ -185,7 +188,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciQ-xn-IaU">
-                                <rect key="frame" x="305" y="625" width="71" height="32"/>
+                                <rect key="frame" x="300" y="625" width="71" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
                                 <state key="normal" title="Sign Out">
@@ -236,9 +239,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e7N-aO-q9l">
-                                <rect key="frame" x="8" y="626" width="49" height="33"/>
+                                <rect key="frame" x="7" y="629" width="53" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
                                 <state key="normal" title="Profile">
                                     <color key="titleColor" red="0.87317574024200439" green="0.41516456007957458" blue="0.21331101655960083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -287,11 +290,20 @@
                         <outlet property="usernameLabel" destination="9hn-jU-kmf" id="Sdu-7f-tlB"/>
                         <segue destination="PxG-iW-ySL" kind="show" identifier="benefitSegue" id="rQY-e6-Zh7"/>
                         <segue destination="w6K-GH-Sew" kind="show" identifier="signOutSegue" id="iUn-fU-7GS"/>
+                        <segue destination="MaK-Pd-LeX" kind="show" identifier="businessPageSegue" id="8nF-n6-Vvt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1984.8" y="318.89055472263868"/>
+        </scene>
+        <!--BusinessHomePage-->
+        <scene sceneID="on4-ve-Hew">
+            <objects>
+                <viewControllerPlaceholder storyboardName="BusinessHomePage" id="MaK-Pd-LeX" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wuc-2O-BRY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2546" y="-45"/>
         </scene>
         <!--EmailList-->
         <scene sceneID="0J3-UW-KQr">

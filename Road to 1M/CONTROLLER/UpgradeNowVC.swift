@@ -81,7 +81,7 @@ class UpgradeNowVC: UIViewController {
         performSegue(withIdentifier: "benefitsToHome", sender: nil)
         
         
-        print("Please take me to home screen")
+        print("Taken to home screen")
     }
     
 // StoreKit Action buttons

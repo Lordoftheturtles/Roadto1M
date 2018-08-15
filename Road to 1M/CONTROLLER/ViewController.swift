@@ -136,11 +136,20 @@ class ViewController: UIViewController {
     performSegue(withIdentifier: "chatViewSegue", sender: nil)
     print("Sending user to chat view controller")
 }
-
+    @IBAction func businessIconButtonTapped(_ sender: UIButton) {
+        // Perform Segue to Business Page
+        let storyboard = UIStoryboard(name: "BusinessHomePage", bundle: nil)
+        let _ = storyboard.instantiateViewController(withIdentifier: "businessHomePage") as? UINavigationController
+        performSegue(withIdentifier: "businessPageSegue", sender: nil)
+        print("Taking you to Business page!")
+    }
+    
 @IBAction func emailListButtonTapped(_ sender: UIButton) {
     let storyboard = UIStoryboard(name: "EmailList", bundle: nil)
     let _ = storyboard.instantiateViewController(withIdentifier: "emailViewController") as? UINavigationController
     performSegue(withIdentifier: "emailListSegue", sender: nil)
+    
+    
     //MARK:- SEGUE
     
 }

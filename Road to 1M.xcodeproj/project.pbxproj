@@ -11,6 +11,8 @@
 		55198DE121104CB6009C9CD7 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55198DDF21104CB6009C9CD7 /* User+CoreDataClass.swift */; };
 		55198DE221104CB6009C9CD7 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55198DE021104CB6009C9CD7 /* User+CoreDataProperties.swift */; };
 		55198DE421106B75009C9CD7 /* SwiftValidator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55198DE321106B75009C9CD7 /* SwiftValidator.framework */; };
+		551FCF162124251900B657B9 /* BusinessHomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 551FCF152124251900B657B9 /* BusinessHomePage.storyboard */; };
+		551FCF182124258A00B657B9 /* businessHomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551FCF172124258A00B657B9 /* businessHomePage.swift */; };
 		55262901211C61B000E83731 /* SwiftyStoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55262900211C61B000E83731 /* SwiftyStoreKit.framework */; };
 		552D8E84211473E8008AEE93 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 552D8E83211473E8008AEE93 /* StoreKit.framework */; };
 		553BB2EF2113687B0013E00D /* UpgradeNowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB2EE2113687B0013E00D /* UpgradeNowVC.swift */; };
@@ -43,6 +45,8 @@
 		55198DDF21104CB6009C9CD7 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		55198DE021104CB6009C9CD7 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		55198DE321106B75009C9CD7 /* SwiftValidator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftValidator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		551FCF152124251900B657B9 /* BusinessHomePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BusinessHomePage.storyboard; sourceTree = "<group>"; };
+		551FCF172124258A00B657B9 /* businessHomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = businessHomePage.swift; sourceTree = "<group>"; };
 		55262900211C61B000E83731 /* SwiftyStoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyStoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		552D8E83211473E8008AEE93 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		553BB2EE2113687B0013E00D /* UpgradeNowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeNowVC.swift; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 		55198DE521109238009C9CD7 /* CONTROLLER */ = {
 			isa = PBXGroup;
 			children = (
+				551FCF172124258A00B657B9 /* businessHomePage.swift */,
 				55963C98211F1D26008B8A1A /* forgotPasswordViewController.swift */,
 				55963C8E211EFCC6008B8A1A /* loginViewController.swift */,
 				55963C90211F16E1008B8A1A /* SignUpViewController.swift */,
@@ -147,6 +152,7 @@
 				55DE95AE2114E0B7005E97CA /* EmailList.storyboard */,
 				55DE95B02114E0CB005E97CA /* Upgrade.storyboard */,
 				55DE95B22114E0D8005E97CA /* ChatView.storyboard */,
+				551FCF152124251900B657B9 /* BusinessHomePage.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -269,6 +275,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				551FCF162124251900B657B9 /* BusinessHomePage.storyboard in Resources */,
 				55DE95B32114E0D8005E97CA /* ChatView.storyboard in Resources */,
 				55E855F1210D759B00A03B4A /* LaunchScreen.storyboard in Resources */,
 				55DE95B12114E0CB005E97CA /* Upgrade.storyboard in Resources */,
@@ -354,6 +361,7 @@
 				55963C99211F1D26008B8A1A /* forgotPasswordViewController.swift in Sources */,
 				55963C9B211F2BFA008B8A1A /* AlertController.swift in Sources */,
 				55A480F7210DD376002C6B40 /* Constants.swift in Sources */,
+				551FCF182124258A00B657B9 /* businessHomePage.swift in Sources */,
 				55198DDE21104549009C9CD7 /* PersistenceService.swift in Sources */,
 				553BB2EF2113687B0013E00D /* UpgradeNowVC.swift in Sources */,
 				55A480F9210DDA16002C6B40 /* ChatPageViewController.swift in Sources */,

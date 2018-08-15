@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LPo-jr-8RG">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--homeViewController-->
+        <scene sceneID="7gs-aD-dxE">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="homeViewController" id="eFb-oN-Ybt" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K2C-bE-OmC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-812" y="-151"/>
+        </scene>
+        <!--Business Home Page-->
+        <scene sceneID="2NY-C2-eYl">
+            <objects>
+                <viewController storyboardIdentifier="businessHomePage" id="LPo-jr-8RG" customClass="businessHomePage" customModule="Road_to_1M" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FFS-3K-zHj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bbtopandbottom" translatesAutoresizingMaskIntoConstraints="NO" id="UkS-0k-ywv">
+                                <rect key="frame" x="-346" y="0.0" width="1067" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jme-lc-YfH">
+                                <rect key="frame" x="7" y="24" width="49" height="49"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <state key="normal" image="custombackbutton"/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="LPo-jr-8RG" eventType="touchUpInside" id="Xf6-CD-8JF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEa-JL-7mD">
+                                <rect key="frame" x="0.0" y="127" width="375" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="bronzecoursebutton"/>
+                                <connections>
+                                    <action selector="bronzeButtonTapped:" destination="LPo-jr-8RG" eventType="touchUpInside" id="FjS-dr-qw4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLK-s2-2B5">
+                                <rect key="frame" x="0.0" y="231" width="375" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="silvercoursebutton"/>
+                                <connections>
+                                    <action selector="silverButtonTapped:" destination="LPo-jr-8RG" eventType="touchUpInside" id="un5-FK-Eau"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPu-ml-uYM">
+                                <rect key="frame" x="0.0" y="334" width="375" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="goldcoursebutton"/>
+                                <connections>
+                                    <action selector="goldButtonTapped:" destination="LPo-jr-8RG" eventType="touchUpInside" id="jt0-B2-4k4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVz-nO-ICR">
+                                <rect key="frame" x="0.0" y="437" width="375" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="platinumcoursebutton"/>
+                                <connections>
+                                    <action selector="platinumButtonTapped:" destination="LPo-jr-8RG" eventType="touchUpInside" id="fnH-9E-xKh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vM0-Ek-iD9">
+                                <rect key="frame" x="75" y="24" width="211" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwK-wu-rpe">
+                                <rect key="frame" x="80" y="636" width="215" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="RaL-25-SgH"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="Jme-lc-YfH" id="ITT-7E-re8"/>
+                        <outlet property="bronzeCourseButton" destination="ZEa-JL-7mD" id="OOL-Ar-UQi"/>
+                        <outlet property="goldCourseButton" destination="FPu-ml-uYM" id="v6y-ue-IBQ"/>
+                        <outlet property="loggedInLabel" destination="zwK-wu-rpe" id="8z7-TC-ugg"/>
+                        <outlet property="platinumCourseButton" destination="xVz-nO-ICR" id="ulx-tm-zdn"/>
+                        <outlet property="silverCourseButton" destination="mLK-s2-2B5" id="Ghv-OJ-IQ0"/>
+                        <outlet property="titleLabel" destination="vM0-Ek-iD9" id="JaN-ep-BAN"/>
+                        <segue destination="eFb-oN-Ybt" kind="show" identifier="businessToHome" id="4CD-QT-59h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JWp-GN-i2R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-68" y="101.19940029985008"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bbtopandbottom" width="375" height="667"/>
+        <image name="bronzecoursebutton" width="375" height="75"/>
+        <image name="custombackbutton" width="49" height="49"/>
+        <image name="goldcoursebutton" width="375" height="75"/>
+        <image name="platinumcoursebutton" width="375" height="75"/>
+        <image name="silvercoursebutton" width="375" height="75"/>
+    </resources>
+</document>
